@@ -19,6 +19,10 @@ class ViewController: UIViewController {
         return colores[indice]
     }
 
+    var tuplaRandom: (Float, Float, Float) {
+        return (Float(arc4random() % 3), Float(arc4random() % 4), Float(arc4random() % 5))
+    }
+
     @IBOutlet weak var arkitView: ARSCNView!
     
     let configuracion = ARWorldTrackingConfiguration()
@@ -33,12 +37,15 @@ class ViewController: UIViewController {
         let nodo = SCNNode()
         nodo.geometry = SCNBox(width: 0.5, height: 0.5, length: 0.5, chamferRadius: 0.03)
         nodo.geometry?.firstMaterial?.diffuse.contents = randomColor
+        nodo.position = SCNVector3Make(tuplaRandom.0, tuplaRandom.1, tuplaRandom.2)
+        self.arkitView.scene.rootNode.addChildNode(nodo)
+    }
 
-        let x = arc4random() % 3
-        let y = arc4random() % 4
-        let z = arc4random() % 5
-        
-        nodo.position = SCNVector3Make (Float(x), Float(y), Float(z))
+    @IBAction func agregarCirculo(_ sender: Any) {
+        let nodo = SCNNode()
+        nodo.geometry = SCNSphere(radius: 0.25)
+        nodo.geometry?.firstMaterial?.diffuse.contents = randomColor
+        nodo.position = SCNVector3Make(tuplaRandom.0, tuplaRandom.1, tuplaRandom.2)
         self.arkitView.scene.rootNode.addChildNode(nodo)
     }
 }
