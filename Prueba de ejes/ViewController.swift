@@ -23,6 +23,8 @@ class ViewController: UIViewController {
         return (Float(arc4random() % 3), Float(arc4random() % 4), Float(arc4random() % 5))
     }
 
+    var grupoDeElementos: [SCNNode] = []
+
     @IBOutlet weak var arkitView: ARSCNView!
     
     let configuracion = ARWorldTrackingConfiguration()
@@ -39,6 +41,7 @@ class ViewController: UIViewController {
         nodo.geometry?.firstMaterial?.diffuse.contents = randomColor
         nodo.position = SCNVector3Make(tuplaRandom.0, tuplaRandom.1, tuplaRandom.2)
         self.arkitView.scene.rootNode.addChildNode(nodo)
+        grupoDeElementos.append(nodo)
     }
 
     @IBAction func agregarCirculo(_ sender: Any) {
@@ -47,5 +50,12 @@ class ViewController: UIViewController {
         nodo.geometry?.firstMaterial?.diffuse.contents = randomColor
         nodo.position = SCNVector3Make(tuplaRandom.0, tuplaRandom.1, tuplaRandom.2)
         self.arkitView.scene.rootNode.addChildNode(nodo)
+        grupoDeElementos.append(nodo)
+    }
+
+    @IBAction func borrarTodo(_ sender: Any) {
+        for elemento in grupoDeElementos {
+            elemento.removeFromParentNode()
+        }
     }
 }

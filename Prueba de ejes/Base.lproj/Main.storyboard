@@ -37,6 +37,14 @@
                                     <action selector="agregarCirculo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WP4-qf-f9m"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZu-bp-wqN">
+                                <rect key="frame" x="168" y="361" width="39" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="borrarTodo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4c6-zq-8Zc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
