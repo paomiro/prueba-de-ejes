@@ -20,8 +20,15 @@ class ViewController: UIViewController {
     }
 
     var tuplaRandom: (Float, Float, Float) {
-        return (Float(arc4random() % 3), Float(arc4random() % 4), Float(arc4random() % 5))
+        let indice = Int(arc4random() % 2)
+        return (
+            Float(arc4random() % 3) * Float(signoMultiplicador[indice]),
+            Float(arc4random() % 4) * Float(signoMultiplicador[indice]),
+            Float(arc4random() % 5) * Float(signoMultiplicador[indice])
+        )
     }
+
+    var signoMultiplicador = [-1, 1]
 
     var grupoDeElementos: [SCNNode] = []
 
