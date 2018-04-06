@@ -10,22 +10,17 @@ import UIKit
 import ARKit
 
 class ViewController: UIViewController {
+
     @IBOutlet weak var arkitView: ARSCNView!
     
     let configuracion = ARWorldTrackingConfiguration()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.arkitView.debugOptions = [ARSCNDebugOptions.showFeaturePoints, ARSCNDebugOptions.showWorldOrigin]
-    
-        self.arkitView.session.run(configuracion)
-        
-    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        self.arkitView.debugOptions = []
+
+        self.arkitView.session.run(configuracion)
     }
 
     @IBAction func agregarCaja(_ sender: Any) {
@@ -33,16 +28,11 @@ class ViewController: UIViewController {
         nodo.geometry = SCNBox(width: 0.5, height: 0.5, length: 0.5, chamferRadius: 0.03)
         nodo.geometry?.firstMaterial?.diffuse.contents = UIColor .blue
         
-        let x = arc4random()  % 2+1 
-        let y = arc4random()  % 3+1
-        let z = arc4random()  % 4+1
-        
+        let x = arc4random()  % 3
+        let y = arc4random()  % 4
+        let z = arc4random()  % 5
         
         nodo.position = SCNVector3Make (Float(x), Float(y), Float(z))
         self.arkitView.scene.rootNode.addChildNode(nodo)
- 
-        
     }
-    
 }
-
