@@ -44,7 +44,7 @@ class ViewController: UIViewController {
 
     @IBAction func agregarCaja(_ sender: Any) {
         let nodo = SCNNode()
-        nodo.geometry = SCNBox(width: 0.6, height: 0.5, length: 0.5, chamferRadius: 0.03)
+        nodo.geometry = SCNBox(width: 0.6, height: 0.6, length: 0.5, chamferRadius: 0.03)
         nodo.geometry?.firstMaterial?.diffuse.contents = randomColor
         nodo.position = SCNVector3Make(tuplaRandom.0, tuplaRandom.1, tuplaRandom.2)
         self.arkitView.scene.rootNode.addChildNode(nodo)
