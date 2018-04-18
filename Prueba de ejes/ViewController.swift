@@ -60,6 +60,15 @@ class ViewController: UIViewController {
         grupoDeElementos.append(nodo)
     }
 
+    @IBAction func agregarCono(_ sender: Any) {
+        let nodo = SCNNode()
+        nodo.geometry = SCNCone(topRadius: 0.2, bottomRadius: 0.1, height: 0.5)
+        nodo.geometry?.firstMaterial?.diffuse.contents = randomColor
+        nodo.position = SCNVector3Make(tuplaRandom.0, tuplaRandom.1, tuplaRandom.2)
+        self.arkitView.scene.rootNode.addChildNode(nodo)
+        grupoDeElementos.append(nodo)
+    }
+    
     @IBAction func borrarTodo(_ sender: Any) {
         for elemento in grupoDeElementos {
             elemento.removeFromParentNode()
