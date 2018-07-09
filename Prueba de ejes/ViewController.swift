@@ -59,6 +59,15 @@ class ViewController: UIViewController {
         self.arkitView.scene.rootNode.addChildNode(nodo)
         grupoDeElementos.append(nodo)
     }
+    
+    @IBAction func agregarCapsula(_ sender: Any) {
+        let nodo = SCNNode()
+        nodo.geometry = SCNCapsule(capRadius: 0.5, height: 0.5)
+        nodo.geometry?.firstMaterial?.diffuse.contents = randomColor
+        nodo.position = SCNVector3Make(tuplaRandom.0, tuplaRandom.1, tuplaRandom.2)
+        self.arkitView.scene.rootNode.addChildNode(nodo)
+        grupoDeElementos.append(nodo)
+    }
 
     @IBAction func agregarCono(_ sender: Any) {
         let nodo = SCNNode()
@@ -92,7 +101,7 @@ class ViewController: UIViewController {
         let lightNode = SCNNode()
         lightNode.light = SCNLight()
         lightNode.light!.type = .omni
-        lightNode.position = SCNVector3(x: 0, y: 10, z: 10)
+        lightNode.position = SCNVector3(x: 20, y: 10, z: 10)
         scene.rootNode.addChildNode(lightNode)
 
         // create and add an ambient light to the scene
@@ -106,7 +115,7 @@ class ViewController: UIViewController {
         let ship = scene.rootNode.childNode(withName: "Plane", recursively: false)!
 
         // animate the 3d object
-        ship.runAction(SCNAction.repeatForever(SCNAction.rotateBy(x: 0, y: 2, z: 0, duration: 1)))
+        ship.runAction(SCNAction.repeatForever(SCNAction.rotateBy(x: 15, y: 0, z: 0, duration:5)))
 
         self.arkitView.scene = scene
 
