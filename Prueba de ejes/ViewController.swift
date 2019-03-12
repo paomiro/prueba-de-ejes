@@ -87,7 +87,7 @@ class ViewController: UIViewController {
     @IBAction func agregarPlano(_ sender: Any) {
         // create a new scene
         // let scene = SCNScene(named: "art.scnassets/ship.scn")!
-        let scene = SCNScene(named: "art.scnassets/te5.scn")!
+        let scene = SCNScene(named: "art.scnassets/prueba.scn")!
 
         // create and add a camera to the scene
         let cameraNode = SCNNode()
