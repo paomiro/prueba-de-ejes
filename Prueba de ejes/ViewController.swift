@@ -87,7 +87,8 @@ class ViewController: UIViewController {
     @IBAction func agregarPlano(_ sender: Any) {
         // create a new scene
         // let scene = SCNScene(named: "art.scnassets/ship.scn")!
-        let scene = SCNScene(named: "art.scnassets/prueba.scn")!
+        // let scene = SCNScene(named: "art.scnassets/prueba.scn")!
+        let scene = SCNScene(named: "art.scnassets/Combi_Luis_6.scn")!
 
         // create and add a camera to the scene
         let cameraNode = SCNNode()
@@ -111,11 +112,11 @@ class ViewController: UIViewController {
         ambientLightNode.light!.color = UIColor.darkGray
         scene.rootNode.addChildNode(ambientLightNode)
 
-        // retrieve the ship node
-        let ship = scene.rootNode.childNode(withName: "Plane", recursively: false)!
-
-        // animate the 3d object
-        ship.runAction(SCNAction.repeatForever(SCNAction.rotateBy(x: 15, y: 0, z: 0, duration:5)))
+//        // retrieve the ship node
+//        let ship = scene.rootNode.childNode(withName: "Plane", recursively: false)!
+//
+//        // animate the 3d object
+//        ship.runAction(SCNAction.repeatForever(SCNAction.rotateBy(x: 15, y: 0, z: 0, duration:5)))
 
         self.arkitView.scene = scene
 

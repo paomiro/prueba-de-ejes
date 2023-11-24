@@ -305,6 +305,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6F69A38VNJ;
 				INFOPLIST_FILE = "Prueba de ejes/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cz.paomiro.Prueba-de-ejes";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -321,6 +322,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6F69A38VNJ;
 				INFOPLIST_FILE = "Prueba de ejes/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cz.paomiro.Prueba-de-ejes";
 				PRODUCT_NAME = "$(TARGET_NAME)";
