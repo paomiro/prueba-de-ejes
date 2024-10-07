@@ -107,7 +107,7 @@
 				TargetAttributes = {
 					8D7B09B61FD4492F00620998 = {
 						CreatedOnToolsVersion = 9.1;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1530;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -303,13 +303,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6F69A38VNJ;
+				DEVELOPMENT_TEAM = 9EPRDC25T5;
 				INFOPLIST_FILE = "Prueba de ejes/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "cz.paomiro.Prueba-de-ejes";
+				PRODUCT_BUNDLE_IDENTIFIER = "mx.paomiro.Prueba-de-ejes";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -320,13 +320,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6F69A38VNJ;
+				DEVELOPMENT_TEAM = 9EPRDC25T5;
 				INFOPLIST_FILE = "Prueba de ejes/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "cz.paomiro.Prueba-de-ejes";
+				PRODUCT_BUNDLE_IDENTIFIER = "mx.paomiro.Prueba-de-ejes";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
