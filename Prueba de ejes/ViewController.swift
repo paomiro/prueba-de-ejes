@@ -33,9 +33,9 @@ class ViewController: UIViewController {
     var grupoDeElementos: [SCNNode] = []
 
     @IBOutlet weak var arkitView: ARSCNView!
-    
+
     let configuracion = ARWorldTrackingConfiguration()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.arkitView.debugOptions = []
@@ -59,7 +59,7 @@ class ViewController: UIViewController {
         self.arkitView.scene.rootNode.addChildNode(nodo)
         grupoDeElementos.append(nodo)
     }
-    
+
     @IBAction func agregarCapsula(_ sender: Any) {
         let nodo = SCNNode()
         nodo.geometry = SCNCapsule(capRadius: 0.5, height: 0.5)
@@ -77,7 +77,50 @@ class ViewController: UIViewController {
         self.arkitView.scene.rootNode.addChildNode(nodo)
         grupoDeElementos.append(nodo)
     }
-    
+
+    @IBAction func addFish() {
+       // let scene = SCNScene(named: "art.scnassets/Combi_Luis_6.scn")!
+        guard let fishScene = SCNScene(named: "art.scnassets/pez.scn") else { return }
+        let fishNode = fishScene.rootNode.clone()
+        let ambientLightNode = SCNNode()
+        ambientLightNode.light = SCNLight()
+        ambientLightNode.light!.type = .ambient
+        ambientLightNode.light!.color = UIColor.darkGray
+        fishScene.rootNode.addChildNode(ambientLightNode)
+//        fishNode.geometry?.firstMaterial?.diffuse.contents = randomColor
+        fishNode.position = SCNVector3Make(tuplaRandom.0, tuplaRandom.1, tuplaRandom.2)
+
+
+
+        self.arkitView.scene.rootNode.addChildNode(fishNode)
+//
+//            // Animate fish
+//            let move = SCNAction.moveBy(x: CGFloat.random(in: -0.5 ... 0.5),
+//                                        y: CGFloat.random(in: -0.5 ... 0.5),
+//                                        z: CGFloat.random(in: -0.5 ... 0.5),
+//                                        duration: 3)
+//            let repeatMove = SCNAction.repeatForever(move)
+//            clonedFish.runAction(repeatMove)
+
+    }
+
+    @IBAction func addAlgae() {
+        guard let algaeScene = SCNScene(named: "art.scnassets/alga.scn") else { return }
+        let algaeNode = algaeScene.rootNode.clone()
+        let ambientLightNode = SCNNode()
+        ambientLightNode.light = SCNLight()
+        ambientLightNode.light!.type = .ambient
+        ambientLightNode.light!.color = UIColor.darkGray
+        algaeScene.rootNode.addChildNode(ambientLightNode)
+//       algaeNode.geometry?.firstMaterial?.diffuse.contents = randomColor
+        algaeNode.position = SCNVector3Make(tuplaRandom.0, tuplaRandom.1, tuplaRandom.2)
+
+
+
+        self.arkitView.scene.rootNode.addChildNode(algaeNode)
+
+
+    }
     @IBAction func borrarTodo(_ sender: Any) {
         for elemento in grupoDeElementos {
             elemento.removeFromParentNode()
