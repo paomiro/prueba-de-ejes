@@ -79,20 +79,30 @@ class ViewController: UIViewController {
     }
 
     @IBAction func addFish() {
-       // let scene = SCNScene(named: "art.scnassets/Combi_Luis_6.scn")!
-        guard let fishScene = SCNScene(named: "art.scnassets/pez.scn") else { return }
-        let fishNode = fishScene.rootNode.clone()
-        let ambientLightNode = SCNNode()
-        ambientLightNode.light = SCNLight()
-        ambientLightNode.light!.type = .ambient
-        ambientLightNode.light!.color = UIColor.darkGray
-        fishScene.rootNode.addChildNode(ambientLightNode)
-//        fishNode.geometry?.firstMaterial?.diffuse.contents = randomColor
-        fishNode.position = SCNVector3Make(tuplaRandom.0, tuplaRandom.1, tuplaRandom.2)
+
+        guard let fishScene = SCNScene(named: "art.scnassets/fish.scn") else { return }
 
 
 
-        self.arkitView.scene.rootNode.addChildNode(fishNode)
+        if let fishNode = fishScene.rootNode.childNode(withName: "fish", recursively: true) {
+            let node = SCNNode(geometry: fishNode.geometry)
+            node.geometry?.firstMaterial?.diffuse.contents = randomColor
+            node.position = SCNVector3Make(tuplaRandom.0, tuplaRandom.1, tuplaRandom.2)
+            let ambientLightNode = SCNNode()
+            ambientLightNode.light = SCNLight()
+            ambientLightNode.light!.type = .ambient
+            ambientLightNode.light!.color = UIColor.darkGray
+            fishScene.rootNode.addChildNode(ambientLightNode)
+            fishScene.rootNode.addChildNode(node)
+            fishNode.geometry?.firstMaterial?.diffuse.contents = randomColor
+            fishNode.position = SCNVector3Make(tuplaRandom.0, tuplaRandom.1, tuplaRandom.2)
+            print(fishNode.geometry?.material(named: "rosa")?.diffuse.contents as Any)
+            self.arkitView.scene.rootNode.addChildNode(fishNode)
+        } else {
+            print("No se encontró el nodo 'fish'")
+        }
+
+
 //
 //            // Animate fish
 //            let move = SCNAction.moveBy(x: CGFloat.random(in: -0.5 ... 0.5),
