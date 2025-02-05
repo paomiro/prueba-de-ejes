@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		24B10A0D2090E62D00C6B5AE /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 24B10A0C2090E62D00C6B5AE /* art.scnassets */; };
-		8D56D1591FE8628900F54A79 /* Main288.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D56D1571FE8628900F54A79 /* Main288.storyboard */; };
 		8D660DEC20F327700071FFC9 /* texture.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D660DEB20F3276F0071FFC9 /* texture.png */; };
 		8D7B09BB1FD4492F00620998 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7B09BA1FD4492F00620998 /* AppDelegate.swift */; };
 		8D7B09BD1FD4492F00620998 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7B09BC1FD4492F00620998 /* ViewController.swift */; };
@@ -23,7 +22,6 @@
 
 /* Begin PBXFileReference section */
 		24B10A0C2090E62D00C6B5AE /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
-		8D56D1581FE8628900F54A79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Prueba de ejes/Base.lproj/Main288.storyboard"; sourceTree = "<group>"; };
 		8D56D15A1FE869FB00F54A79 /* Paola_prueba_2.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Paola_prueba_2.scn; sourceTree = "<group>"; };
 		8D660DEB20F3276F0071FFC9 /* texture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = texture.png; path = art.scnassets/texture.png; sourceTree = "<group>"; };
 		8D7B09B71FD4492F00620998 /* Prueba de ejes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Prueba de ejes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,7 +51,6 @@
 		8D7B09AE1FD4492F00620998 = {
 			isa = PBXGroup;
 			children = (
-				8D56D1571FE8628900F54A79 /* Main288.storyboard */,
 				8D7B09B91FD4492F00620998 /* Prueba de ejes */,
 				8D7B09B81FD4492F00620998 /* Products */,
 			);
@@ -155,7 +152,6 @@
 				B28E18742D53DC9C00B1D917 /* alga.scn in Resources */,
 				B28E18702D53D57600B1D917 /* fish.scn in Resources */,
 				8D660DEC20F327700071FFC9 /* texture.png in Resources */,
-				8D56D1591FE8628900F54A79 /* Main288.storyboard in Resources */,
 				8D7B09C01FD4492F00620998 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,14 +171,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8D56D1571FE8628900F54A79 /* Main288.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8D56D1581FE8628900F54A79 /* Base */,
-			);
-			name = Main288.storyboard;
-			sourceTree = "<group>";
-		};
 		8D7B09BE1FD4492F00620998 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
