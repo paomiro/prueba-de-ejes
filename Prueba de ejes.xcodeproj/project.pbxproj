@@ -15,7 +15,6 @@
 		8D7B09C21FD4492F00620998 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D7B09C11FD4492F00620998 /* Assets.xcassets */; };
 		8D7B09C51FD4492F00620998 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D7B09C31FD4492F00620998 /* LaunchScreen.storyboard */; };
 		B28E186E2D53D54C00B1D917 /* nuevopez.dae in Resources */ = {isa = PBXBuildFile; fileRef = B28E186D2D53D54C00B1D917 /* nuevopez.dae */; };
-		B28E18702D53D57600B1D917 /* fish.scn in Resources */ = {isa = PBXBuildFile; fileRef = B28E186F2D53D57600B1D917 /* fish.scn */; };
 		B28E18722D53DBE000B1D917 /* alga.dae in Resources */ = {isa = PBXBuildFile; fileRef = B28E18712D53DBE000B1D917 /* alga.dae */; };
 		B28E18742D53DC9C00B1D917 /* alga.scn in Resources */ = {isa = PBXBuildFile; fileRef = B28E18732D53DC9C00B1D917 /* alga.scn */; };
 /* End PBXBuildFile section */
@@ -32,7 +31,6 @@
 		8D7B09C41FD4492F00620998 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D7B09C61FD4492F00620998 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B28E186D2D53D54C00B1D917 /* nuevopez.dae */ = {isa = PBXFileReference; lastKnownFileType = text.xml.dae; path = nuevopez.dae; sourceTree = "<group>"; };
-		B28E186F2D53D57600B1D917 /* fish.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = fish.scn; sourceTree = "<group>"; };
 		B28E18712D53DBE000B1D917 /* alga.dae */ = {isa = PBXFileReference; lastKnownFileType = text.xml.dae; path = alga.dae; sourceTree = "<group>"; };
 		B28E18732D53DC9C00B1D917 /* alga.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = alga.scn; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,7 +68,6 @@
 				B28E18712D53DBE000B1D917 /* alga.dae */,
 				B28E18732D53DC9C00B1D917 /* alga.scn */,
 				B28E186D2D53D54C00B1D917 /* nuevopez.dae */,
-				B28E186F2D53D57600B1D917 /* fish.scn */,
 				8D56D15A1FE869FB00F54A79 /* Paola_prueba_2.scn */,
 				8D7B09BA1FD4492F00620998 /* AppDelegate.swift */,
 				8D7B09BC1FD4492F00620998 /* ViewController.swift */,
@@ -150,7 +147,6 @@
 				B28E18722D53DBE000B1D917 /* alga.dae in Resources */,
 				24B10A0D2090E62D00C6B5AE /* art.scnassets in Resources */,
 				B28E18742D53DC9C00B1D917 /* alga.scn in Resources */,
-				B28E18702D53D57600B1D917 /* fish.scn in Resources */,
 				8D660DEC20F327700071FFC9 /* texture.png in Resources */,
 				8D7B09C01FD4492F00620998 /* Main.storyboard in Resources */,
 			);
