@@ -79,10 +79,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func addFish() {
-
         guard let fishScene = SCNScene(named: "art.scnassets/fish.scn") else { return }
-
-
 
         if let fishNode = fishScene.rootNode.childNode(withName: "fish", recursively: true) {
             let node = SCNNode(geometry: fishNode.geometry)
@@ -102,16 +99,16 @@ class ViewController: UIViewController {
             print("No se encontró el nodo 'fish'")
         }
 
-
-//
-//            // Animate fish
-//            let move = SCNAction.moveBy(x: CGFloat.random(in: -0.5 ... 0.5),
-//                                        y: CGFloat.random(in: -0.5 ... 0.5),
-//                                        z: CGFloat.random(in: -0.5 ... 0.5),
-//                                        duration: 3)
-//            let repeatMove = SCNAction.repeatForever(move)
-//            clonedFish.runAction(repeatMove)
-
+    }
+    
+    private func animateFish() {
+        // Animate fish
+        let move = SCNAction.moveBy(x: CGFloat.random(in: -0.5 ... 0.5),
+                                    y: CGFloat.random(in: -0.5 ... 0.5),
+                                    z: CGFloat.random(in: -0.5 ... 0.5),
+                                    duration: 3)
+        let repeatMove = SCNAction.repeatForever(move)
+        // clonedFish.runAction(repeatMove)
     }
 
     @IBAction func addAlgae() {
@@ -122,15 +119,10 @@ class ViewController: UIViewController {
         ambientLightNode.light!.type = .ambient
         ambientLightNode.light!.color = UIColor.darkGray
         algaeScene.rootNode.addChildNode(ambientLightNode)
-//       algaeNode.geometry?.firstMaterial?.diffuse.contents = randomColor
         algaeNode.position = SCNVector3Make(tuplaRandom.0, tuplaRandom.1, tuplaRandom.2)
-
-
-
         self.arkitView.scene.rootNode.addChildNode(algaeNode)
-
-
     }
+    
     @IBAction func borrarTodo(_ sender: Any) {
         for elemento in grupoDeElementos {
             elemento.removeFromParentNode()
@@ -138,9 +130,6 @@ class ViewController: UIViewController {
     }
 
     @IBAction func agregarPlano(_ sender: Any) {
-        // create a new scene
-        // let scene = SCNScene(named: "art.scnassets/ship.scn")!
-        // let scene = SCNScene(named: "art.scnassets/prueba.scn")!
         let scene = SCNScene(named: "art.scnassets/Combi_Luis_6.scn")!
 
         // create and add a camera to the scene
@@ -167,7 +156,6 @@ class ViewController: UIViewController {
 
 //        // retrieve the ship node
 //        let ship = scene.rootNode.childNode(withName: "Plane", recursively: false)!
-//
 //        // animate the 3d object
 //        ship.runAction(SCNAction.repeatForever(SCNAction.rotateBy(x: 15, y: 0, z: 0, duration:5)))
 
